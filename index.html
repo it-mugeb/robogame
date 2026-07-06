@@ -434,7 +434,7 @@
                 
                 <!-- Sisi Kiri: Peta Grid 2D -->
                 <div class="lg:col-span-7 bg-slate-900/60 border border-slate-800 rounded-3xl p-5 flex flex-col justify-between relative overflow-hidden">
-                    <span class="absolute top-3 left-3 bg-cyan-500/10 text-cyan-400 text-xs px-2.5 py-1 rounded-md border border-cyan-500/20 font-bold z-10">PETA PULAU</span>
+                    <span class="absolute top-3 left-3 bg-cyan-500/10 text-cyan-400 text-xs px-2.5 py-1 rounded-md border border-cyan-500/20 font-bold zone-index: 10">PETA PULAU</span>
                     
                     <div class="w-full flex-grow flex flex-col justify-center items-center py-4">
                         <div class="grid grid-cols-5 gap-1.5 p-3 bg-slate-950 border border-slate-800 rounded-2xl w-full max-w-[360px] aspect-square relative" id="l3-grid-container">
@@ -1678,7 +1678,9 @@
         const apiKey = ""; 
 
         async function callGemini(prompt, systemInstruction = "") {
-            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+            const url = `https://generGenerativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+            // Memperbaiki URL yang tidak sengaja rusak
+            const realUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
             
             const payload = {
                 contents: [{ parts: [{ text: prompt }] }]
@@ -1691,7 +1693,7 @@
             let delay = 1000;
             for (let i = 0; i < 5; i++) {
                 try {
-                    const response = await fetch(url, {
+                    const response = await fetch(realUrl, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(payload)
