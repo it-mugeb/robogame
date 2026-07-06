@@ -876,23 +876,28 @@
             const levels = [1, 2, 3];
             levels.forEach(i => {
                 const badge = document.getElementById(`badge-l${i}`);
-                if (i === levelNum) {
-                    badge.className = "w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold bg-cyan-500 text-slate-950 ring-4 ring-cyan-500/20";
-                } else if (i < levelNum) {
-                    badge.className = "w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold bg-emerald-500 text-slate-950";
-                } else {
-                    badge.className = "w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold bg-slate-800 text-slate-400";
+                if (badge) {
+                    if (i === levelNum) {
+                        badge.className = "w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold bg-cyan-500 text-slate-950 ring-4 ring-cyan-500/20";
+                    } else if (i < levelNum) {
+                        badge.className = "w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold bg-emerald-500 text-slate-950";
+                    } else {
+                        badge.className = "w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold bg-slate-800 text-slate-400";
+                    }
                 }
             });
 
             const badgeTest = document.getElementById('badge-test');
-            if (levelNum === 'test') {
-                badgeTest.className = "w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold bg-indigo-500 text-slate-950 ring-4 ring-indigo-500/20";
-                levels.forEach(i => {
-                    document.getElementById(`badge-l${i}`).className = "w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold bg-emerald-500 text-slate-950";
-                });
-            } else {
-                badgeTest.className = "w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold bg-slate-800 text-slate-400";
+            if (badgeTest) {
+                if (levelNum === 'test') {
+                    badgeTest.className = "w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold bg-indigo-500 text-slate-950 ring-4 ring-indigo-500/20";
+                    levels.forEach(i => {
+                        const b = document.getElementById(`badge-l${i}`);
+                        if (b) b.className = "w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold bg-emerald-500 text-slate-950";
+                    });
+                } else {
+                    badgeTest.className = "w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold bg-slate-800 text-slate-400";
+                }
             }
 
             if (levelNum === 1) {
@@ -1128,7 +1133,7 @@
         function l3InitLevel() {
             l3RoboPos = { x: 0, y: 4 };
             l3RoboDir = "right";
-            l3ClearWorkspace();
+            // JANGAN menghapus workspace secara otomatis jika mengalami kegagalan/restart agar siswa bisa debug kodenya sendiri
             l3RenderGrid();
         }
 
@@ -1260,75 +1265,80 @@
 
             let sensorTerbangAktif = false;
 
-            for (let i = 0; i < l3ProgramQueue.length; i++) {
-                const cmd = l3ProgramQueue[i];
-                
-                // Suara motor robot melangkah/beraksi
-                playSFX(300 + (i * 20), 0.1, "triangle");
-                await new Promise(resolve => setTimeout(resolve, 800));
+            try {
+                for (let i = 0; i < l3ProgramQueue.length; i++) {
+                    const cmd = l3ProgramQueue[i];
+                    
+                    // Suara motor robot melangkah/beraksi
+                    playSFX(300 + (i * 20), 0.1, "triangle");
+                    await new Promise(resolve => setTimeout(resolve, 800));
 
-                if (cmd === "sensor") {
-                    sensorTerbangAktif = true;
-                    playSFX(880.00, 0.2, "sine"); // Cek sensor sound
-                    continue;
-                }
+                    if (cmd === "sensor") {
+                        sensorTerbangAktif = true;
+                        playSFX(880.00, 0.2, "sine"); // Cek sensor sound
+                        continue;
+                    }
 
-                if (cmd === "kanan") {
-                    if (l3RoboDir === "up") l3RoboDir = "right";
-                    else if (l3RoboDir === "right") l3RoboDir = "down";
-                    else if (l3RoboDir === "down") l3RoboDir = "left";
-                    else if (l3RoboDir === "left") l3RoboDir = "up";
-                } else if (cmd === "kiri") {
-                    if (l3RoboDir === "up") l3RoboDir = "left";
-                    else if (l3RoboDir === "left") l3RoboDir = "down";
-                    else if (l3RoboDir === "down") l3RoboDir = "right";
-                    else if (l3RoboDir === "right") l3RoboDir = "up";
-                } else if (cmd === "maju") {
-                    if (l3RoboDir === "up") l3RoboPos.y--;
-                    if (l3RoboDir === "down") l3RoboPos.y++;
-                    if (l3RoboDir === "left") l3RoboPos.x--;
-                    if (l3RoboDir === "right") l3RoboPos.x++;
-                }
+                    if (cmd === "kanan") {
+                        if (l3RoboDir === "up") l3RoboDir = "right";
+                        else if (l3RoboDir === "right") l3RoboDir = "down";
+                        else if (l3RoboDir === "down") l3RoboDir = "left";
+                        else if (l3RoboDir === "left") l3RoboDir = "up";
+                    } else if (cmd === "kiri") {
+                        if (l3RoboDir === "up") l3RoboDir = "left";
+                        else if (l3RoboDir === "left") l3RoboDir = "down";
+                        else if (l3RoboDir === "down") l3RoboDir = "right";
+                        else if (l3RoboDir === "right") l3RoboDir = "up";
+                    } else if (cmd === "maju") {
+                        if (l3RoboDir === "up") l3RoboPos.y--;
+                        if (l3RoboDir === "down") l3RoboPos.y++;
+                        if (l3RoboDir === "left") l3RoboPos.x--;
+                        if (l3RoboDir === "right") l3RoboPos.x++;
+                    }
 
-                if (l3RoboPos.x < 0 || l3RoboPos.x > 4 || l3RoboPos.y < 0 || l3RoboPos.y > 4) {
-                    playFailureSound(); // Sad fail sound
-                    alertCustom("Robo Nabrak!", "Sistem navigasi Robo menabrak batas dinding pulau! Silakan rancang kembali rute yang benar.");
-                    l3EndRun();
-                    return;
-                }
-
-                l3RenderGrid();
-
-                const currentCellType = l3MapTemp[l3RoboPos.y][l3RoboPos.x];
-                if (currentCellType === 1) {
-                    if (!sensorTerbangAktif) {
+                    if (l3RoboPos.x < 0 || l3RoboPos.x > 4 || l3RoboPos.y < 0 || l3RoboPos.y > 4) {
                         playFailureSound(); // Sad fail sound
-                        alertCustom("Robo Tenggelam!", "Robo jatuh ke air dan mengalami korsleting! Ingat gunakan logika sensor 'Jika ada air -> Terbang' sebelum melewatinya.");
+                        alertCustom("Robo Nabrak!", "Sistem navigasi Robo menabrak batas dinding pulau! Silakan rancang kembali rute yang benar.");
                         l3EndRun();
                         return;
-                    } else {
-                        // Sound efek melayang di atas air
-                        playSFX(1200.00, 0.15, "sine");
+                    }
+
+                    l3RenderGrid();
+
+                    const currentCellType = l3MapTemp[l3RoboPos.y][l3RoboPos.x];
+                    if (currentCellType === 1) {
+                        if (!sensorTerbangAktif) {
+                            playFailureSound(); // Sad fail sound
+                            alertCustom("Robo Tenggelam!", "Robo jatuh ke air dan mengalami korsleting! Ingat gunakan logika sensor 'Jika ada air -> Terbang' sebelum melewatinya.");
+                            l3EndRun();
+                            return;
+                        } else {
+                            // Sound efek melayang di atas air
+                            playSFX(1200.00, 0.15, "sine");
+                        }
                     }
                 }
-            }
 
-            const finalCellType = l3MapTemp[l3RoboPos.y][l3RoboPos.x];
-            if (finalCellType === 3) {
-                updateScore(300);
-                
-                // Melodi kemenangan megah
-                playSuccessSound();
+                const finalCellType = l3MapTemp[l3RoboPos.y][l3RoboPos.x];
+                if (finalCellType === 3) {
+                    updateScore(300);
+                    
+                    // Melodi kemenangan megah
+                    playSuccessSound();
 
-                setTimeout(() => {
-                    showReflection(3, () => {
-                        currentLevel = 'test';
-                        startDialogue('test');
-                    });
-                }, 1500);
-            } else {
-                playFailureSound();
-                alertCustom("Belum Sampai Core!", "Sistem Robo berhasil menjelajah rute dengan selamat, namun berhenti di lokasi yang salah. Ayo rancang rute yang mencapai Core Kuning!");
+                    setTimeout(() => {
+                        showReflection(3, () => {
+                            currentLevel = 'test';
+                            startDialogue('test');
+                        });
+                    }, 1500);
+                } else {
+                    playFailureSound();
+                    alertCustom("Belum Sampai Core!", "Sistem Robo berhasil menjelajah rute dengan selamat, namun berhenti di lokasi yang salah. Ayo rancang rute yang mencapai Core Kuning!");
+                    l3EndRun();
+                }
+            } catch (err) {
+                console.error("Error selama eksekusi program Level 3:", err);
                 l3EndRun();
             }
         }
@@ -1637,6 +1647,31 @@
             scoreSpan.innerText = "0";
             hideAllScreens();
             screenIntro.classList.remove('hidden');
+        }
+
+        // --- CUSTOM POPUP MODAL DIALOG ---
+        function alertCustom(title, message, callback = null) {
+            const existing = document.getElementById('custom-popup');
+            if (existing) existing.remove();
+
+            const popup = document.createElement('div');
+            popup.id = "custom-popup";
+            popup.className = "fixed inset-0 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4 z-[9999]";
+            popup.innerHTML = `
+                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 max-w-sm w-full text-center shadow-2xl relative animate-float">
+                    <h4 class="text-xl font-extrabold font-fun text-cyan-400 mb-2">${title}</h4>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">${message}</p>
+                    <button id="btn-popup-close" class="bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-slate-950 font-extrabold font-fun px-6 py-3 rounded-xl w-full transition cursor-pointer">
+                        OK, Paham!
+                    </button>
+                </div>
+            `;
+            document.body.appendChild(popup);
+
+            document.getElementById('btn-popup-close').onclick = function() {
+                popup.remove();
+                if (callback) callback();
+            };
         }
 
         // --- GEMINI API INTEGRATION & CO-PILOT CHAT PANEL ---
