@@ -149,12 +149,12 @@
                 <!-- AI Tutor, Audio & Pelacak Progres -->
                 <div class="flex flex-wrap items-center gap-2 bg-slate-950 px-4 py-2 rounded-2xl sm:rounded-full border border-slate-800">
                     <!-- Tombol Musik -->
-                    <button onclick="toggleMusic()" id="btn-music" class="bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700/60 p-2 rounded-full text-xs transition" title="Musik Latar">
+                    <button onclick="toggleMusic()" id="btn-music" class="bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700/60 p-2 rounded-full text-xs transition cursor-pointer" title="Musik Latar">
                         <i class="fas fa-volume-mute" id="music-icon"></i>
                     </button>
 
                     <div class="hidden sm:block h-4 w-px bg-slate-800"></div>
-                    <button onclick="toggleAiAssistant()" class="bg-gradient-to-r from-cyan-500/20 to-indigo-500/20 hover:from-cyan-500/35 hover:to-indigo-500/35 text-cyan-300 border border-cyan-500/40 px-3 py-1 rounded-full text-[11px] font-bold transition flex items-center gap-1">
+                    <button onclick="toggleAiAssistant()" class="bg-gradient-to-r from-cyan-500/20 to-indigo-500/20 hover:from-cyan-500/35 hover:to-indigo-500/35 text-cyan-300 border border-cyan-500/40 px-3 py-1 rounded-full text-[11px] font-bold transition flex items-center gap-1 cursor-pointer">
                         <span>✨</span> Tanya AI
                     </button>
                     <div class="hidden sm:block h-4 w-px bg-slate-800"></div>
@@ -215,7 +215,7 @@
                     <input type="text" id="input-name" placeholder="Masukkan nama kerenmu..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-center font-bold">
                 </div>
 
-                <button onclick="startGame()" class="bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-slate-950 font-extrabold font-fun text-lg px-8 py-4 rounded-2xl shadow-lg shadow-cyan-500/25 transition-all transform hover:-translate-y-1 active:translate-y-0 w-full max-w-sm">
+                <button onclick="startGame()" class="bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-slate-950 font-extrabold font-fun text-lg px-8 py-4 rounded-2xl shadow-lg shadow-cyan-500/25 transition-all transform hover:-translate-y-1 active:translate-y-0 w-full max-w-sm cursor-pointer">
                     Mulai Petualangan <i class="fas fa-play ml-2"></i>
                 </button>
             </section>
@@ -235,7 +235,7 @@
                     <h4 class="font-bold text-cyan-400 text-xs md:text-sm uppercase tracking-widest font-fun">Robo Berkata:</h4>
                     <p id="dialogue-text" class="text-slate-100 mt-2 leading-relaxed text-sm md:text-base">Halo Partner! Tolong bantu aku menyalakan sistem tubuhku di Laboratorium...</p>
                 </div>
-                <button id="btn-dialogue-next" class="bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-slate-950 font-extrabold font-fun px-6 py-3 rounded-2xl text-sm transition shadow-lg shadow-cyan-500/25 flex-shrink-0 w-full md:w-auto">
+                <button id="btn-dialogue-next" class="bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-slate-950 font-extrabold font-fun px-6 py-3 rounded-2xl text-sm transition shadow-lg shadow-cyan-500/25 flex-shrink-0 w-full md:w-auto cursor-pointer">
                     Lanjut <i class="fas fa-arrow-right ml-1"></i>
                 </button>
             </section>
@@ -249,7 +249,7 @@
                     <h4 class="text-cyan-400 font-bold text-sm mb-2 uppercase tracking-wide" id="reflect-subtitle">KONSEP</h4>
                     <p id="reflect-desc" class="text-slate-300 text-xs md:text-sm leading-relaxed whitespace-pre-line">Deskripsi konsep refleksi belajar...</p>
                 </div>
-                <button id="btn-reflect-continue" class="bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-slate-950 font-extrabold font-fun px-8 py-3.5 rounded-2xl text-sm transition shadow-lg shadow-cyan-500/25 w-full max-w-sm">
+                <button id="btn-reflect-continue" class="bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-slate-950 font-extrabold font-fun px-8 py-3.5 rounded-2xl text-sm transition shadow-lg shadow-cyan-500/25 w-full max-w-sm cursor-pointer">
                     Lanjut ke Tantangan Baru! <i class="fas fa-chevron-right ml-1"></i>
                 </button>
             </section>
@@ -308,21 +308,21 @@
                         <div class="space-y-2.5">
                             <label class="text-xs font-bold text-slate-500 tracking-wider uppercase">Pilihan Aktivitas (Dekomposisi):</label>
                             <div id="l1-pool" class="grid grid-cols-1 gap-2">
-                                <button onclick="l1SelectItem('baterai')" id="btn-opt-baterai" class="flex items-center gap-3 bg-slate-800 hover:bg-slate-700/80 p-3 rounded-xl border border-slate-700 transition text-left text-sm font-medium">
+                                <button onclick="l1SelectItem('baterai')" id="btn-opt-baterai" class="flex items-center gap-3 bg-slate-800 hover:bg-slate-700/80 p-3 rounded-xl border border-slate-700 transition text-left text-sm font-medium cursor-pointer">
                                     <span class="bg-amber-500/10 text-amber-400 p-2 rounded-lg text-xs font-bold w-8 h-8 flex items-center justify-center">🔋</span>
                                     <div>
                                         <div class="font-bold">Pasang Baterai Energi</div>
                                         <div class="text-[10px] text-slate-400">Memasukkan daya listrik utama.</div>
                                     </div>
                                 </button>
-                                <button onclick="l1SelectItem('bersihkan')" id="btn-opt-bersihkan" class="flex items-center gap-3 bg-slate-800 hover:bg-slate-700/80 p-3 rounded-xl border border-slate-700 transition text-left text-sm font-medium">
+                                <button onclick="l1SelectItem('bersihkan')" id="btn-opt-bersihkan" class="flex items-center gap-3 bg-slate-800 hover:bg-slate-700/80 p-3 rounded-xl border border-slate-700 transition text-left text-sm font-medium cursor-pointer">
                                     <span class="bg-cyan-500/10 text-cyan-400 p-2 rounded-lg text-xs font-bold w-8 h-8 flex items-center justify-center">🧼</span>
                                     <div>
                                         <div class="font-bold">Bersihkan Debu & Karat</div>
                                         <div class="text-[10px] text-slate-400">Membersihkan debu dari komponen.</div>
                                     </div>
                                 </button>
-                                <button onclick="l1SelectItem('nyalakan')" id="btn-opt-nyalakan" class="flex items-center gap-3 bg-slate-800 hover:bg-slate-700/80 p-3 rounded-xl border border-slate-700 transition text-left text-sm font-medium">
+                                <button onclick="l1SelectItem('nyalakan')" id="btn-opt-nyalakan" class="flex items-center gap-3 bg-slate-800 hover:bg-slate-700/80 p-3 rounded-xl border border-slate-700 transition text-left text-sm font-medium cursor-pointer">
                                     <span class="bg-emerald-500/10 text-emerald-400 p-2 rounded-lg text-xs font-bold w-8 h-8 flex items-center justify-center">⚡</span>
                                     <div>
                                         <div class="font-bold">Tekan Tombol Power</div>
@@ -332,11 +332,11 @@
                             </div>
                         </div>
 
-                        <!-- Ruang Workspace Utama -->
+                        <!-- Target Workspace / Order Area -->
                         <div class="mt-6">
                             <label class="text-xs font-bold text-slate-500 tracking-wider uppercase flex justify-between">
                                 <span>Workspace Urutan (Sequence):</span>
-                                <button onclick="l1Reset()" class="text-red-400 hover:text-red-300 text-[10px] uppercase font-bold">Reset</button>
+                                <button onclick="l1Reset()" class="text-red-400 hover:text-red-300 text-[10px] uppercase font-bold cursor-pointer">Reset</button>
                             </label>
                             <div id="l1-workspace" class="mt-2 bg-slate-950 rounded-2xl p-4 border border-slate-800 min-h-[160px] flex flex-col gap-2 justify-center items-center">
                                 <span id="l1-empty-indicator" class="text-xs text-slate-600 italic">Workspace Kosong. Klik pilihan aktivitas di atas untuk mengurutkan!</span>
@@ -346,7 +346,7 @@
 
                     <!-- Tombol Jalankan -->
                     <div class="mt-6 pt-4 border-t border-slate-800/80">
-                        <button onclick="l1VerifySequence()" class="w-full bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-slate-950 font-extrabold font-fun py-3 rounded-xl transition shadow-lg shadow-cyan-500/10">
+                        <button onclick="l1VerifySequence()" class="w-full bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-slate-950 font-extrabold font-fun py-3 rounded-xl transition shadow-lg shadow-cyan-500/10 cursor-pointer">
                             Jalankan Urutan (Run) <i class="fas fa-play-circle ml-1"></i>
                         </button>
                     </div>
@@ -399,9 +399,9 @@
                             <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
                                 <span class="text-xs font-bold text-cyan-400 block mb-2 uppercase tracking-wide">Langkah 1: Tentukan Pola Inti</span>
                                 <div class="flex gap-2 justify-center">
-                                    <button onclick="l2TogglePatternCell(0)" id="l2-p0" class="w-10 h-10 rounded-xl bg-slate-800 border-2 border-slate-700 hover:border-slate-500 transition-all flex items-center justify-center font-bold text-xs"></button>
-                                    <button onclick="l2TogglePatternCell(1)" id="l2-p1" class="w-10 h-10 rounded-xl bg-slate-800 border-2 border-slate-700 hover:border-slate-500 transition-all flex items-center justify-center font-bold text-xs"></button>
-                                    <button onclick="l2TogglePatternCell(2)" id="l2-p2" class="w-10 h-10 rounded-xl bg-slate-800 border-2 border-slate-700 hover:border-slate-500 transition-all flex items-center justify-center font-bold text-xs"></button>
+                                    <button onclick="l2TogglePatternCell(0)" id="l2-p0" class="w-10 h-10 rounded-xl bg-slate-800 border-2 border-slate-700 hover:border-slate-500 transition-all flex items-center justify-center font-bold text-xs cursor-pointer"></button>
+                                    <button onclick="l2TogglePatternCell(1)" id="l2-p1" class="w-10 h-10 rounded-xl bg-slate-800 border-2 border-slate-700 hover:border-slate-500 transition-all flex items-center justify-center font-bold text-xs cursor-pointer"></button>
+                                    <button onclick="l2TogglePatternCell(2)" id="l2-p2" class="w-10 h-10 rounded-xl bg-slate-800 border-2 border-slate-700 hover:border-slate-500 transition-all flex items-center justify-center font-bold text-xs cursor-pointer"></button>
                                 </div>
                                 <p class="text-[10px] text-center text-slate-500 mt-2">Klik kotak di atas untuk berganti warna: <span class="text-cyan-400">Cyan</span> ➜ <span class="text-rose-400">Merah</span> ➜ <span class="text-indigo-400">Indigo</span></p>
                             </div>
@@ -421,8 +421,8 @@
 
                     <!-- Tombol Aksi -->
                     <div class="mt-6 pt-4 border-t border-slate-800/80 flex gap-2">
-                        <button onclick="l2Reset()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold px-4 py-3 rounded-xl text-sm">Reset</button>
-                        <button onclick="l2VerifyLoop()" class="flex-grow bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-slate-950 font-extrabold font-fun py-3 rounded-xl transition shadow-lg shadow-cyan-500/10">
+                        <button onclick="l2Reset()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold px-4 py-3 rounded-xl text-sm cursor-pointer">Reset</button>
+                        <button onclick="l2VerifyLoop()" class="flex-grow bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-slate-950 font-extrabold font-fun py-3 rounded-xl transition shadow-lg shadow-cyan-500/10 cursor-pointer">
                             Kirim Sandi <i class="fas fa-key ml-1"></i>
                         </button>
                     </div>
@@ -466,16 +466,16 @@
                         <div class="space-y-3">
                             <label class="text-xs font-bold text-slate-500 tracking-wider uppercase">Blok Perintah Tersedia:</label>
                             <div class="grid grid-cols-2 gap-2" id="l3-commands-pool">
-                                <button onclick="l3AddBlock('maju')" class="bg-blue-600 hover:bg-blue-500 text-white font-bold p-2.5 rounded-xl text-xs flex items-center justify-between shadow-md active:scale-95 transition">
+                                <button onclick="l3AddBlock('maju')" class="bg-blue-600 hover:bg-blue-500 text-white font-bold p-2.5 rounded-xl text-xs flex items-center justify-between shadow-md active:scale-95 transition cursor-pointer">
                                     <span>Maju 1 Blok</span> <i class="fas fa-arrow-up"></i>
                                 </button>
-                                <button onclick="l3AddBlock('kanan')" class="bg-blue-600 hover:bg-blue-500 text-white font-bold p-2.5 rounded-xl text-xs flex items-center justify-between shadow-md active:scale-95 transition">
+                                <button onclick="l3AddBlock('kanan')" class="bg-blue-600 hover:bg-blue-500 text-white font-bold p-2.5 rounded-xl text-xs flex items-center justify-between shadow-md active:scale-95 transition cursor-pointer">
                                     <span>Belok Kanan</span> <i class="fas fa-redo"></i>
                                 </button>
-                                <button onclick="l3AddBlock('kiri')" class="bg-blue-600 hover:bg-blue-500 text-white font-bold p-2.5 rounded-xl text-xs flex items-center justify-between shadow-md active:scale-95 transition">
+                                <button onclick="l3AddBlock('kiri')" class="bg-blue-600 hover:bg-blue-500 text-white font-bold p-2.5 rounded-xl text-xs flex items-center justify-between shadow-md active:scale-95 transition cursor-pointer">
                                     <span>Belok Kiri</span> <i class="fas fa-undo"></i>
                                 </button>
-                                <button onclick="l3AddBlock('sensor')" class="bg-amber-600 hover:bg-amber-500 text-white font-bold p-2.5 rounded-xl text-xs flex items-center justify-between shadow-md active:scale-95 transition col-span-2">
+                                <button onclick="l3AddBlock('sensor')" class="bg-amber-600 hover:bg-amber-500 text-white font-bold p-2.5 rounded-xl text-xs flex items-center justify-between shadow-md active:scale-95 transition col-span-2 cursor-pointer">
                                     <span>Jika ada AIR ➜ Terbang</span> <i class="fas fa-water"></i>
                                 </button>
                             </div>
@@ -485,7 +485,7 @@
                         <div class="mt-6">
                             <div class="flex justify-between items-center mb-1.5">
                                 <label class="text-xs font-bold text-slate-500 tracking-wider uppercase">Program Rute Kamu (Maks. 15):</label>
-                                <button onclick="l3ClearWorkspace()" class="text-red-400 hover:text-red-300 text-[10px] uppercase font-bold">Clear</button>
+                                <button onclick="l3ClearWorkspace()" class="text-red-400 hover:text-red-300 text-[10px] uppercase font-bold cursor-pointer">Clear</button>
                             </div>
                             <div id="l3-workspace" class="bg-slate-950 rounded-2xl p-4 border border-slate-800 min-h-[160px] max-h-[220px] overflow-y-auto flex flex-col gap-1.5 no-scrollbar">
                                 <!-- Diisi secara dinamis oleh tombol perintah -->
@@ -495,7 +495,7 @@
 
                     <!-- Tombol Jalankan Algoritma -->
                     <div class="mt-6 pt-4 border-t border-slate-800/80 flex gap-2">
-                        <button id="l3-run-btn" onclick="l3RunProgram()" class="flex-grow bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-slate-950 font-extrabold font-fun py-3 rounded-xl transition shadow-lg shadow-emerald-500/10">
+                        <button id="l3-run-btn" onclick="l3RunProgram()" class="flex-grow bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-slate-950 font-extrabold font-fun py-3 rounded-xl transition shadow-lg shadow-emerald-500/10 cursor-pointer">
                             Jalankan Program <i class="fas fa-play ml-1"></i>
                         </button>
                     </div>
@@ -533,7 +533,7 @@
                         <h5 id="test-explanation-title" class="text-sm font-bold font-fun">Penjelasan Logika CT</h5>
                     </div>
                     <p id="test-explanation-text" class="text-slate-300 text-xs md:text-sm leading-relaxed mb-4"></p>
-                    <button id="btn-test-next" class="bg-gradient-to-r from-indigo-500 to-cyan-500 hover:from-indigo-400 hover:to-cyan-400 text-slate-950 font-extrabold font-fun px-6 py-2.5 rounded-xl text-xs transition w-full md:w-auto md:float-right">
+                    <button id="btn-test-next" class="bg-gradient-to-r from-indigo-500 to-cyan-500 hover:from-indigo-400 hover:to-cyan-400 text-slate-950 font-extrabold font-fun px-6 py-2.5 rounded-xl text-xs transition w-full md:w-auto md:float-right cursor-pointer">
                         Lanjut ke Soal Berikutnya <i class="fas fa-chevron-right ml-1"></i>
                     </button>
                 </div>
@@ -645,7 +645,7 @@
                     </div>
                 </div>
 
-                <button onclick="restartGame()" class="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-slate-950 font-extrabold font-fun text-lg px-8 py-4 rounded-2xl transition shadow-lg shadow-emerald-500/25 mt-6">
+                <button onclick="restartGame()" class="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-slate-950 font-extrabold font-fun text-lg px-8 py-4 rounded-2xl transition shadow-lg shadow-emerald-500/25 mt-6 cursor-pointer">
                     Main Lagi <i class="fas fa-redo ml-2"></i>
                 </button>
             </section>
@@ -670,7 +670,7 @@
                     <p class="text-[10px] text-slate-400">Siap membimbingmu memecahkan masalah!</p>
                 </div>
             </div>
-            <button onclick="toggleAiAssistant()" class="text-slate-400 hover:text-slate-100 p-2 text-sm">
+            <button onclick="toggleAiAssistant()" class="text-slate-400 hover:text-slate-100 p-2 text-sm cursor-pointer">
                 <i class="fas fa-times"></i>
             </button>
         </div>
@@ -689,13 +689,13 @@
 
         <!-- Tombol Rekomendasi Prompt Cepat -->
         <div class="px-4 py-2 border-t border-slate-900 flex flex-wrap gap-1.5 bg-slate-950">
-            <button onclick="sendQuickAiPrompt('Beri aku petunjuk pintar untuk menyelesaikan level saat ini! 💡')" class="text-[10px] bg-slate-900 hover:bg-slate-800 text-cyan-300 px-2 py-1 rounded-md border border-cyan-500/20 transition">
+            <button onclick="sendQuickAiPrompt('Beri aku petunjuk pintar untuk menyelesaikan level saat ini! 💡')" class="text-[10px] bg-slate-900 hover:bg-slate-800 text-cyan-300 px-2 py-1 rounded-md border border-cyan-500/20 transition cursor-pointer">
                 ✨ Minta Petunjuk Level
             </button>
-            <button onclick="sendQuickAiPrompt('Apa itu konsep Computational Thinking dan contohnya? 🤔')" class="text-[10px] bg-slate-900 hover:bg-slate-800 text-cyan-300 px-2 py-1 rounded-md border border-cyan-500/20 transition">
+            <button onclick="sendQuickAiPrompt('Apa itu konsep Computational Thinking dan contohnya? 🤔')" class="text-[10px] bg-slate-900 hover:bg-slate-800 text-cyan-300 px-2 py-1 rounded-md border border-cyan-500/20 transition cursor-pointer">
                 ✨ Apa itu CT?
             </button>
-            <button onclick="sendQuickAiPrompt('Bagaimana cara kerja blok Loop atau pengulangan di Scratch? 🔄')" class="text-[10px] bg-slate-900 hover:bg-slate-800 text-cyan-300 px-2 py-1 rounded-md border border-cyan-500/20 transition">
+            <button onclick="sendQuickAiPrompt('Bagaimana cara kerja blok Loop atau pengulangan di Scratch? 🔄')" class="text-[10px] bg-slate-900 hover:bg-slate-800 text-cyan-300 px-2 py-1 rounded-md border border-cyan-500/20 transition cursor-pointer">
                 ✨ Jelaskan Loop Scratch
             </button>
         </div>
@@ -704,7 +704,7 @@
         <div class="p-4 bg-slate-900 border-t border-slate-800">
             <div class="flex gap-2">
                 <input type="text" id="ai-chat-input" placeholder="Tanyakan apa saja ke Robo AI..." class="flex-grow bg-slate-950 border border-slate-800 rounded-xl px-3 py-2.5 text-xs text-slate-100 placeholder-slate-600 focus:outline-none focus:ring-1 focus:ring-cyan-500" onkeypress="handleAiKeyPress(event)">
-                <button onclick="sendAiMessage()" id="ai-send-btn" class="bg-cyan-600 hover:bg-cyan-500 text-slate-950 font-bold px-4 py-2 rounded-xl text-xs flex items-center justify-center transition">
+                <button onclick="sendAiMessage()" id="ai-send-btn" class="bg-cyan-600 hover:bg-cyan-500 text-slate-950 font-bold px-4 py-2 rounded-xl text-xs flex items-center justify-center transition cursor-pointer">
                     Kirim
                 </button>
             </div>
@@ -910,29 +910,733 @@
             }
         }
 
-        // --- CUSTOM POPUP MODAL DIALOG ---
-        function alertCustom(title, message, callback = null) {
-            const existing = document.getElementById('custom-popup');
-            if (existing) existing.remove();
+        // --- LEVEL 1 LOGIC (Dekomposisi) ---
+        let l1SelectedSequence = [];
+        const l1CorrectSequence = ["bersihkan", "baterai", "nyalakan"];
 
-            const popup = document.createElement('div');
-            popup.id = "custom-popup";
-            popup.className = "fixed inset-0 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4 z-[9999]";
-            popup.innerHTML = `
-                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 max-w-sm w-full text-center shadow-2xl relative animate-float">
-                    <h4 class="text-xl font-extrabold font-fun text-cyan-400 mb-2">${title}</h4>
-                    <p class="text-slate-300 text-sm leading-relaxed mb-6">${message}</p>
-                    <button id="btn-popup-close" class="bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-slate-950 font-extrabold font-fun px-6 py-3 rounded-xl w-full transition">
-                        OK, Paham!
-                    </button>
-                </div>
-            `;
-            document.body.appendChild(popup);
+        function l1Reset() {
+            l1SelectedSequence = [];
+            document.getElementById('btn-opt-bersihkan').style.opacity = "1";
+            document.getElementById('btn-opt-bersihkan').disabled = false;
+            document.getElementById('btn-opt-baterai').style.opacity = "1";
+            document.getElementById('btn-opt-baterai').disabled = false;
+            document.getElementById('btn-opt-nyalakan').style.opacity = "1";
+            document.getElementById('btn-opt-nyalakan').disabled = false;
 
-            document.getElementById('btn-popup-close').onclick = function() {
-                popup.remove();
-                if (callback) callback();
-            };
+            const workspace = document.getElementById('l1-workspace');
+            workspace.innerHTML = `<span id="l1-empty-indicator" class="text-xs text-slate-600 italic">Workspace Kosong. Klik pilihan aktivitas di atas untuk mengurutkan!</span>`;
+
+            document.getElementById('l1-vis-body').setAttribute('fill', '#1e293b');
+            document.getElementById('l1-vis-head').setAttribute('fill', '#1e293b');
+            document.getElementById('l1-vis-eye1').setAttribute('fill', '#475569');
+            document.getElementById('l1-vis-eye2').setAttribute('fill', '#475569');
+            document.getElementById('l1-vis-core').setAttribute('fill', '#334155');
+            document.getElementById('l1-vis-core').setAttribute('stroke', '#475569');
+            document.getElementById('l1-dust').style.opacity = "1";
+            document.getElementById('l1-status-msg').innerText = "Status: Tidak Aktif (Mati)";
+            document.getElementById('l1-status-msg').className = "text-sm font-bold text-amber-400";
+        }
+
+        function l1SelectItem(itemKey) {
+            if (l1SelectedSequence.includes(itemKey)) return;
+            l1SelectedSequence.push(itemKey);
+            
+            // Mainkan nada instrumen klik ceria jika mesin audio berhasil menyala
+            playSFX(587.33, 0.1, "sine"); // D5 Note
+            
+            const optBtn = document.getElementById(`btn-opt-${itemKey}`);
+            if (optBtn) {
+                optBtn.style.opacity = "0.3";
+                optBtn.disabled = true;
+            }
+
+            const emptyLabel = document.getElementById('l1-empty-indicator');
+            if (emptyLabel) emptyLabel.remove();
+
+            const workspace = document.getElementById('l1-workspace');
+            const visualBlock = document.createElement('div');
+            visualBlock.className = "flex items-center justify-between bg-cyan-600/20 text-cyan-300 border border-cyan-500/30 px-3 py-2 rounded-xl text-xs font-bold w-full";
+            
+            let name = "";
+            let emoji = "";
+            if (itemKey === "bersihkan") { name = "Bersihkan Debu & Karat"; emoji = "🧼"; }
+            if (itemKey === "baterai") { name = "Pasang Baterai Energi"; emoji = "🔋"; }
+            if (itemKey === "nyalakan") { name = "Tekan Tombol Power"; emoji = "⚡"; }
+
+            visualBlock.innerHTML = `<span>${emoji} ${name}</span> <span class="bg-cyan-500/10 text-cyan-400 text-[10px] px-2 py-0.5 rounded-full border border-cyan-500/20">Langkah ${l1SelectedSequence.length}</span>`;
+            workspace.appendChild(visualBlock);
+        }
+
+        function l1VerifySequence() {
+            if (l1SelectedSequence.length < 3) {
+                alertCustom("Instruksi belum lengkap!", "Kamu harus menyusun ketiga aktivitas dekomposisi tersebut untuk melakukan boot sistem.");
+                return;
+            }
+
+            let success = true;
+            for (let i = 0; i < 3; i++) {
+                if (l1SelectedSequence[i] !== l1CorrectSequence[i]) {
+                    success = false;
+                    break;
+                }
+            }
+
+            if (success) {
+                // Mainkan suara Berhasil/Sukses (Melodi naik)
+                playSuccessSound();
+
+                document.getElementById('l1-dust').style.opacity = "0";
+                document.getElementById('l1-vis-body').setAttribute('fill', '#334155');
+                document.getElementById('l1-vis-head').setAttribute('fill', '#334155');
+                document.getElementById('l1-vis-eye1').setAttribute('fill', '#22d3ee');
+                document.getElementById('l1-vis-eye2').setAttribute('fill', '#22d3ee');
+                document.getElementById('l1-vis-core').setAttribute('fill', '#ef4444');
+                document.getElementById('l1-vis-core').setAttribute('stroke', '#f87171');
+                document.getElementById('l1-status-msg').innerText = "Status: Robo Menyala & Aktif! ✨";
+                document.getElementById('l1-status-msg').className = "text-sm font-bold text-emerald-400";
+                
+                updateScore(100);
+
+                setTimeout(() => {
+                    showReflection(1, () => {
+                        currentLevel = 2;
+                        startDialogue(2);
+                    });
+                }, 1500);
+            } else {
+                // Mainkan suara Gagal (Buzzer sedih)
+                playFailureSound();
+                if (l1SelectedSequence[0] === "nyalakan") {
+                    alertCustom("Gagal Sistem!", "Kamu menyalakan power sebelum dibersihkan dan dipasang baterai? Robo korsleting karena tumpukan karat!");
+                } else if (l1SelectedSequence[0] === "baterai" && l1SelectedSequence[1] === "nyalakan") {
+                    alertCustom("Komponen Sukses!", "Baterai dipasang saat Robo masih berkarat tebal, lalu langsung dinyalakan. Arus tersumbat debu!");
+                } else {
+                    alertCustom("Urutan Salah!", "Urutan kerjamu belum logis. Coba bersihkan debu terlebih dahulu agar sambungan baterai bersih, baru nyalakan power.");
+                }
+                l1Reset();
+            }
+        }
+
+        // --- LEVEL 2 LOGIC (Pattern Recognition & Loops) ---
+        let l2CurrentSelection = [null, null, null];
+        const l2Colors = ["cyan", "rose", "indigo"];
+        const l2CorrectPattern = ["cyan", "rose", "indigo"];
+        const l2CorrectLoop = 2;
+
+        function l2Reset() {
+            l2CurrentSelection = [null, null, null];
+            document.getElementById('l2-loop-count').value = "1";
+            
+            for (let i = 0; i < 3; i++) {
+                const cell = document.getElementById(`l2-p${i}`);
+                if (cell) {
+                    cell.className = "w-10 h-10 rounded-xl bg-slate-800 border-2 border-slate-700 hover:border-slate-500 transition-all flex items-center justify-center font-bold text-xs cursor-pointer";
+                    cell.innerHTML = "";
+                }
+            }
+
+            document.getElementById('l2-gate-status').innerHTML = `<i class="fas fa-lock mr-1"></i> TERKUNCI`;
+            document.getElementById('l2-gate-status').className = "text-xs font-extrabold text-red-500 animate-pulse";
+        }
+
+        function l2TogglePatternCell(index) {
+            const currentVal = l2CurrentSelection[index];
+            let nextVal = "";
+            let colorClass = "";
+            
+            // SFX klik tombol pola
+            playSFX(440.00, 0.1, "sine"); // A4
+
+            if (currentVal === null) {
+                nextVal = "cyan";
+                colorClass = "bg-cyan-500 border-cyan-300 text-slate-950";
+            } else if (currentVal === "cyan") {
+                nextVal = "rose";
+                colorClass = "bg-rose-500 border-rose-300 text-slate-100";
+            } else if (currentVal === "rose") {
+                nextVal = "indigo";
+                colorClass = "bg-indigo-500 border-indigo-300 text-slate-100";
+            } else {
+                nextVal = null;
+                colorClass = "bg-slate-800 border-slate-700 text-slate-400";
+            }
+
+            l2CurrentSelection[index] = nextVal;
+            const cell = document.getElementById(`l2-p${index}`);
+            if (cell) {
+                cell.className = `w-10 h-10 rounded-xl border-2 transition-all flex items-center justify-center font-bold text-xs ${colorClass} cursor-pointer`;
+                if (nextVal) {
+                    cell.innerText = nextVal[0].toUpperCase();
+                } else {
+                    cell.innerText = "";
+                }
+            }
+        }
+
+        function l2VerifyLoop() {
+            const loopVal = parseInt(document.getElementById('l2-loop-count').value);
+
+            let patternMatch = true;
+            for (let i = 0; i < 3; i++) {
+                if (l2CurrentSelection[i] !== l2CorrectPattern[i]) {
+                    patternMatch = false;
+                }
+            }
+
+            if (!patternMatch) {
+                playFailureSound();
+                alertCustom("Pola Inti Salah!", "Perhatikan kembali monitor sandi target. Cari 3 urutan warna pertama yang membentuk susunan berulang!");
+                return;
+            }
+
+            if (loopVal !== l2CorrectLoop) {
+                playFailureSound();
+                alertCustom("Jumlah Ulangi (Loop) Salah!", `Kamu berhasil mengenali polanya: Cyan-Merah-Indigo. Namun pengulangan sebanyak ${loopVal} kali belum cocok dengan total sandi di pintu gerbang.`);
+                return;
+            }
+
+            // Mainkan suara Berhasil/Sukses (Melodi naik)
+            playSuccessSound();
+
+            document.getElementById('l2-gate-status').innerHTML = `<i class="fas fa-lock-open mr-1"></i> TERBUKA`;
+            document.getElementById('l2-gate-status').className = "text-xs font-extrabold text-emerald-500 animate-bounce";
+            
+            updateScore(150);
+
+            setTimeout(() => {
+                showReflection(2, () => {
+                    currentLevel = 3;
+                    startDialogue(3);
+                });
+            }, 1500);
+        }
+
+        // --- LEVEL 3 LOGIC (Algorithmic Thinking) ---
+        const l3MapTemp = [
+            [0, 0, 0, 0, 3],
+            [0, 1, 0, 1, 0],
+            [0, 1, 0, 0, 0],
+            [0, 0, 1, 0, 0],
+            [2, 0, 0, 0, 0]
+        ];
+        
+        let l3RoboPos = { x: 0, y: 4 };
+        let l3RoboDir = "right";
+        let l3ProgramQueue = [];
+        let l3IsRunning = false;
+
+        function l3InitLevel() {
+            l3RoboPos = { x: 0, y: 4 };
+            l3RoboDir = "right";
+            l3ClearWorkspace();
+            l3RenderGrid();
+        }
+
+        function l3RenderGrid() {
+            const container = document.getElementById('l3-grid-container');
+            if (!container) return;
+            container.innerHTML = "";
+            
+            for (let r = 0; r < 5; r++) {
+                for (let c = 0; c < 5; c++) {
+                    const gridCell = document.createElement('div');
+                    gridCell.className = "relative rounded-lg flex items-center justify-center border transition-all duration-300 ";
+                    
+                    const cellType = l3MapTemp[r][c];
+                    
+                    if (cellType === 0) {
+                        gridCell.className += "bg-slate-900 border-slate-800/80";
+                    } else if (cellType === 1) {
+                        gridCell.className += "bg-blue-600/30 border-blue-500/40 shadow-[inset_0_0_8px_rgba(37,99,235,0.4)]";
+                        gridCell.innerHTML = `<i class="fas fa-water text-blue-400 text-sm animate-pulse"></i>`;
+                    } else if (cellType === 2) {
+                        gridCell.className += "bg-emerald-950/40 border-emerald-500/50";
+                        gridCell.innerHTML = `<span class="text-[10px] font-extrabold text-emerald-400 uppercase">START</span>`;
+                    } else if (cellType === 3) {
+                        gridCell.className += "bg-amber-950/40 border-amber-500/50";
+                        gridCell.innerHTML = `<div class="w-6 h-6 rounded-full bg-yellow-500 animate-glow flex items-center justify-center text-xs">💎</div>`;
+                    }
+
+                    if (l3RoboPos.x === c && l3RoboPos.y === r) {
+                        let rotateClass = "rotate-0";
+                        if (l3RoboDir === "up") rotateClass = "-rotate-90";
+                        if (l3RoboDir === "down") rotateClass = "rotate-90";
+                        if (l3RoboDir === "left") rotateClass = "rotate-180";
+
+                        gridCell.innerHTML = `
+                            <div class="absolute inset-0 flex items-center justify-center z-20">
+                                <div class="w-8 h-8 transition-all duration-300 ${rotateClass}">
+                                    <svg viewBox="0 0 40 40" class="w-full h-full drop-shadow-[0_0_6px_rgba(34,211,238,0.8)]">
+                                        <rect x="8" y="8" width="24" height="24" rx="6" fill="#38bdf8" />
+                                        <circle cx="16" cy="18" r="3" fill="#ffffff" />
+                                        <circle cx="24" cy="18" r="3" fill="#ffffff" />
+                                        <polygon points="12,30 20,34 28,30" fill="#0284c7" />
+                                        <line x1="32" y1="20" x2="26" y2="20" stroke="#f43f5e" stroke-width="2" />
+                                    </svg>
+                                </div>
+                            </div>
+                        `;
+                    }
+
+                    container.appendChild(gridCell);
+                }
+            }
+        }
+
+        function l3AddBlock(commandKey) {
+            if (l3IsRunning) return;
+            if (l3ProgramQueue.length >= 15) {
+                alertCustom("Workspace Penuh!", "Maksimal rute program adalah 15 langkah.");
+                return;
+            }
+            
+            playSFX(698.46, 0.1, "sine"); // F5 note
+            l3ProgramQueue.push(commandKey);
+            l3RefreshWorkspaceUI();
+        }
+
+        function l3RemoveBlock(index) {
+            if (l3IsRunning) return;
+            playSFX(349.23, 0.1, "sine"); // F4 note
+            l3ProgramQueue.splice(index, 1);
+            l3RefreshWorkspaceUI();
+        }
+
+        function l3ClearWorkspace() {
+            if (l3IsRunning) return;
+            l3ProgramQueue = [];
+            l3RefreshWorkspaceUI();
+        }
+
+        function l3RefreshWorkspaceUI() {
+            const workspace = document.getElementById('l3-workspace');
+            if (!workspace) return;
+            workspace.innerHTML = "";
+            
+            l3ProgramQueue.forEach((commandKey, index) => {
+                const visualBlock = document.createElement('div');
+                let colorClasses = "bg-blue-600/20 text-blue-300 border border-blue-500/30";
+                let label = "";
+                let icon = "";
+
+                if (commandKey === "maju") { label = "Maju 1 Blok"; icon = "fa-arrow-up"; }
+                if (commandKey === "kanan") { label = "Belok Kanan"; icon = "fa-redo"; }
+                if (commandKey === "kiri") { label = "Belok Kiri"; icon = "fa-undo"; }
+                if (commandKey === "sensor") { 
+                    label = "Jika ada AIR ➜ Terbang"; 
+                    icon = "fa-water";
+                    colorClasses = "bg-amber-600/20 text-amber-300 border border-amber-500/30";
+                }
+
+                visualBlock.className = `flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-bold w-full ${colorClasses}`;
+                visualBlock.innerHTML = `
+                    <div class="flex items-center gap-2">
+                        <span class="text-[10px] text-slate-500 font-mono">#${index + 1}</span>
+                        <i class="fas ${icon}"></i>
+                        <span>${label}</span>
+                    </div>
+                    <button onclick="l3RemoveBlock(${index})" class="text-red-400 hover:text-red-300 p-1 cursor-pointer"><i class="fas fa-times"></i></button>
+                `;
+                workspace.appendChild(visualBlock);
+            });
+        }
+
+        async function l3RunProgram() {
+            if (l3ProgramQueue.length === 0) {
+                alertCustom("Program Kosong!", "Susun rute jalannya robot terlebih dahulu di bagian workspace.");
+                return;
+            }
+
+            l3IsRunning = true;
+            const runBtn = document.getElementById('l3-run-btn');
+            if (runBtn) {
+                runBtn.disabled = true;
+                runBtn.className = "flex-grow bg-slate-800 text-slate-500 font-extrabold font-fun py-3 rounded-xl cursor-not-allowed";
+            }
+
+            l3RoboPos = { x: 0, y: 4 };
+            l3RoboDir = "right";
+            l3RenderGrid();
+
+            let sensorTerbangAktif = false;
+
+            for (let i = 0; i < l3ProgramQueue.length; i++) {
+                const cmd = l3ProgramQueue[i];
+                
+                // Suara motor robot melangkah/beraksi
+                playSFX(300 + (i * 20), 0.1, "triangle");
+                await new Promise(resolve => setTimeout(resolve, 800));
+
+                if (cmd === "sensor") {
+                    sensorTerbangAktif = true;
+                    playSFX(880.00, 0.2, "sine"); // Cek sensor sound
+                    continue;
+                }
+
+                if (cmd === "kanan") {
+                    if (l3RoboDir === "up") l3RoboDir = "right";
+                    else if (l3RoboDir === "right") l3RoboDir = "down";
+                    else if (l3RoboDir === "down") l3RoboDir = "left";
+                    else if (l3RoboDir === "left") l3RoboDir = "up";
+                } else if (cmd === "kiri") {
+                    if (l3RoboDir === "up") l3RoboDir = "left";
+                    else if (l3RoboDir === "left") l3RoboDir = "down";
+                    else if (l3RoboDir === "down") l3RoboDir = "right";
+                    else if (l3RoboDir === "right") l3RoboDir = "up";
+                } else if (cmd === "maju") {
+                    if (l3RoboDir === "up") l3RoboPos.y--;
+                    if (l3RoboDir === "down") l3RoboPos.y++;
+                    if (l3RoboDir === "left") l3RoboPos.x--;
+                    if (l3RoboDir === "right") l3RoboPos.x++;
+                }
+
+                if (l3RoboPos.x < 0 || l3RoboPos.x > 4 || l3RoboPos.y < 0 || l3RoboPos.y > 4) {
+                    playFailureSound(); // Sad fail sound
+                    alertCustom("Robo Nabrak!", "Sistem navigasi Robo menabrak batas dinding pulau! Silakan rancang kembali rute yang benar.");
+                    l3EndRun();
+                    return;
+                }
+
+                l3RenderGrid();
+
+                const currentCellType = l3MapTemp[l3RoboPos.y][l3RoboPos.x];
+                if (currentCellType === 1) {
+                    if (!sensorTerbangAktif) {
+                        playFailureSound(); // Sad fail sound
+                        alertCustom("Robo Tenggelam!", "Robo jatuh ke air dan mengalami korsleting! Ingat gunakan logika sensor 'Jika ada air -> Terbang' sebelum melewatinya.");
+                        l3EndRun();
+                        return;
+                    } else {
+                        // Sound efek melayang di atas air
+                        playSFX(1200.00, 0.15, "sine");
+                    }
+                }
+            }
+
+            const finalCellType = l3MapTemp[l3RoboPos.y][l3RoboPos.x];
+            if (finalCellType === 3) {
+                updateScore(300);
+                
+                // Melodi kemenangan megah
+                playSuccessSound();
+
+                setTimeout(() => {
+                    showReflection(3, () => {
+                        currentLevel = 'test';
+                        startDialogue('test');
+                    });
+                }, 1500);
+            } else {
+                playFailureSound();
+                alertCustom("Belum Sampai Core!", "Sistem Robo berhasil menjelajah rute dengan selamat, namun berhenti di lokasi yang salah. Ayo rancang rute yang mencapai Core Kuning!");
+                l3EndRun();
+            }
+        }
+
+        function l3EndRun() {
+            l3IsRunning = false;
+            const runBtn = document.getElementById('l3-run-btn');
+            if (runBtn) {
+                runBtn.disabled = false;
+                runBtn.className = "flex-grow bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-slate-950 font-extrabold font-fun py-3 rounded-xl transition shadow-lg shadow-emerald-500/10 cursor-pointer";
+            }
+            l3InitLevel();
+        }
+
+        // --- POST-TEST CORE LOGIC ---
+        const postTestQuestions = [
+            {
+                text: "Ibu meminta kamu merapikan kamarmu yang sangat berantakan. Menggunakan konsep 'Dekomposisi', apa langkah pertama terbaikmu?",
+                options: [
+                    "Menangis and membiarkan kamar tetap berantakan.",
+                    "Membagi tugas merapikan menjadi bagian-bagian kecil (merapikan buku dulu, lalu mainan, lalu menyapu lantai).",
+                    "Merapikan seluruh kamar sekaligus dalam satu detik dengan mata tertutup."
+                ],
+                correct: 1,
+                hint: "Dekomposisi adalah memecah masalah besar menjadi bagian-bagian kecil yang lebih mudah dikerjakan.",
+                explanation: "Memecah tugas besar (Merapikan Kamar) menjadi urutan tugas kecil (Buku ➔ Mainan ➔ Menyapu) adalah pilar **Dekomposisi**. Ini membuat beban kerja terasa ringan, fokus, dan tidak membuat kita pusing!"
+            },
+            {
+                text: "Sebelum mulai membuat nasi goreng, kakak menyiapkan kompor, wajan, nasi, telur, garam, dan kecap di atas meja. Kegiatan persiapan bahan dan alat ini termasuk contoh...",
+                options: [
+                    "Dekomposisi (memecah bagian memasak menjadi persiapan & eksekusi).",
+                    "Pengulangan/Loop.",
+                    "Logika Kondisional."
+                ],
+                correct: 0,
+                hint: "Kita memisahkan proses 'menyiapkan' dari proses 'memasak' agar pekerjaan tidak kacau.",
+                explanation: "Menyiapkan bahan secara terpisah sebelum menyalakan kompor adalah pilar **Dekomposisi**. Kita memisahkan tahap 'Persiapan Bahan' dan 'Eksekusi Memasak' agar proses memasak berjalan lancar tanpa ada bahan yang gosong atau tertinggal!"
+            },
+            {
+                text: "Setiap hari Senin pagi, jalanan di depan sekolahmu selalu macet parah. Kamu menyadari 'Pola' ini, tindakan logis apa yang kamu ambil berdasarkan pengenalan pola tersebut?",
+                options: [
+                    "Tetap berangkat di jam yang sama dan berharap tidak macet.",
+                    "Berangkat 20 menit lebih awal setiap hari Senin untuk menghindari puncak macet.",
+                    "Tidak masuk sekolah setiap hari Senin."
+                ],
+                correct: 1,
+                hint: "Jika kita mengenali suatu pola yang selalu berulang, kita bisa menggunakannya untuk memprediksi dan membuat keputusan cerdas.",
+                explanation: "Mengamati kemacetan berulang di hari Senin pagi adalah penerapan pilar **Pengenalan Pola**. Dengan tahu polanya, kita dapat memprediksi kondisi jalanan dan merancang solusi cerdas (berangkat lebih awal) agar terhindar dari keterlambatan."
+            },
+            {
+                text: "Ibu sedang mencuci piring. Ibu melakukan gerakan berulang: mengusap sabun, membilas air, lalu mengeringkan piring, untuk setiap piring yang kotor. Dalam pemrograman, tindakan berulang ini digambarkan dengan konsep...",
+                options: [
+                    "Kondisional (If-Else).",
+                    "Variabel.",
+                    "Loop (Pengulangan)."
+                ],
+                correct: 2,
+                hint: "Jika kamu mengulangi langkah-langkah yang sama untuk objek yang berbeda, itu adalah pengulangan.",
+                explanation: "Melakukan tiga urutan aksi (Sabun ➔ Bilas ➔ Keringkan) berulang kali untuk 10 piring kotor adalah konsep **Loop (Pengulangan)**. Di Scratch, kita tidak perlu menumpuk puluhan blok kode yang sama, cukup masukkan satu blok Loop 'Ulangi 10 Kali' agar kode efisien."
+            },
+            {
+                text: "Saat kamu mengamati bahwa kucing peliharaanmu selalu mengeong keras setiap jam 7 pagi dan jam 5 sore untuk meminta makan, kamu sedang menerapkan teknik...",
+                options: [
+                    "Dekomposisi.",
+                    "Pengenalan Pola (Pattern Recognition).",
+                    "Algoritma."
+                ],
+                correct: 1,
+                hint: "Kamu menemukan pola jadwal perilaku yang sama di waktu-waktu tertentu.",
+                explanation: "Menemukan keteraturan waktu (pukul 7 pagi dan 5 sore) di mana kucing selalu meminta makan adalah penerapan **Pengenalan Pola**. Pola keteraturan ini sangat berguna bagi kita untuk menyusun jadwal memberi makan otomatis."
+            },
+            {
+                text: "Kakak ingin mengajarkanmu cara membuat teh manis yang enak menggunakan panduan langkah terstruktur: 1) Seduh teh, 2) Masukkan gula, 3) Aduk rata. Panduan langkah teratur ini disebut...",
+                options: [
+                    "Algoritma (Algorithmic Thinking).",
+                    "Abstraksi.",
+                    "Pengenalan Pola."
+                ],
+                correct: 0,
+                hint: "Langkah-langkah yang berurutan dan logis untuk menyelesaikan sebuah tugas disebut algoritma.",
+                explanation: "Panduan resep membuat teh manis yang teratur dan berurutan dari langkah pertama sampai terakhir adalah pilar **Algoritma**. Algoritma harus logis and runut agar siapa saja yang mengikutinya mendapatkan hasil teh manis yang sama lezatnya!"
+            },
+            {
+                text: "Kamu ingin menyeberang jalan. Aturannya: 'JIKA lampu penyeberangan berwarna HIJAU, maka berjalanlah menyeberang. JIKA MERAH, maka berhentilah di trotoar.' Logika ini merupakan konsep...",
+                options: [
+                    "Sequence (Urutan langsung).",
+                    "Kondisional (Percabangan/If-Else).",
+                    "Loop (Pengulangan)."
+                ],
+                correct: 1,
+                hint: "Logika ini menggunakan kata kunci 'Jika-Maka' tergantung kondisi situasi yang terjadi.",
+                explanation: "Membuat aksi berbeda berdasarkan warna lampu penyeberangan adalah logika **Kondisional (If-Else)**. Komputer menggunakan logika ini untuk mengambil keputusan cerdas tergantung kondisi data yang diterimanya."
+            },
+            {
+                text: "Ketika merakit sebuah mainan robot baru dari lego, kamu harus mengikuti buku panduan lembar demi lembar dari halaman 1 sampai selesai agar lego tidak salah pasang. Ini adalah penerapan...",
+                options: [
+                    "Algoritma terstruktur.",
+                    "Pengenalan pola acak.",
+                    "Dekomposisi tanpa urutan."
+                ],
+                correct: 0,
+                hint: "Buku panduan merakit adalah contoh nyata dari sebuah algoritma.",
+                explanation: "Mengikuti instruksi gambar per halaman secara urut adalah pilar **Algoritma Terstruktur**. Jika kita melompati halaman (misal: langsung lompat ke halaman akhir), rakitan Lego pasti akan salah dan roboh."
+            },
+            {
+                text: "Jika kamu merancang alarm pintar di HP dengan aturan: 'JIKA hari Sabtu atau Minggu, maka matikan alarm otomatis. JIKA hari sekolah, bunyikan alarm jam 5.30 pagi.' Blok Scratch apa yang paling cocok untuk aturan ini?",
+                options: [
+                    "Blok 'repeat until' (ulangi sampai).",
+                    "Blok 'if-then-else' (jika-maka-jika tidak).",
+                    "Blok 'when clicked'."
+                ],
+                correct: 1,
+                hint: "Ada dua kondisi yang berbeda dan pilihan keputusan yang saling berlawanan.",
+                explanation: "Pilihan terbaik adalah blok **If-Then-Else**. Blok ini memeriksa kondisi: 'Apakah hari ini libur?'. Jika benar, jalankan perintah matikan alarm. Jika tidak (else), bunyikan alarm jam 5.30 pagi!"
+            },
+            {
+                text: "Kamu ingin membagi tugas kelompok membuat mading sekolah: Andi mencari artikel, Budi menggambar hiasan, dan kamu menempelkan semuanya. Dengan membagi tugas besar ini, pekerjaan jadi cepat selesai. Konsep CT apa ini?",
+                options: [
+                    "Algoritma.",
+                    "Pengenalan Pola.",
+                    "Dekomposisi (Decomposition)."
+                ],
+                correct: 2,
+                hint: "Memecah mading besar menjadi beberapa tugas individu yang lebih kecil.",
+                explanation: "Membagi pekerjaan besar mading menjadi tugas-tugas spesifik yang dikerjakan bersama-sama adalah contoh nyata penerapan **Dekomposisi**. Pekerjaan yang rumit menjadi selesai jauh lebih cepat karena didekomposisikan dengan baik!"
+            }
+        ];
+
+        let testCurrentQuestionIndex = 0;
+        let testCorrectAnswersCount = 0;
+
+        function initPostTest() {
+            testCurrentQuestionIndex = 0;
+            testCorrectAnswersCount = 0;
+            loadTestQuestion();
+        }
+
+        function loadTestQuestion() {
+            const currentQuestion = postTestQuestions[testCurrentQuestionIndex];
+            
+            // Progress tracker updates
+            const idxSpan = document.getElementById('test-current-index');
+            if (idxSpan) idxSpan.innerText = testCurrentQuestionIndex + 1;
+            
+            const progressPercentage = ((testCurrentQuestionIndex + 1) / 10) * 100;
+            const progressBar = document.getElementById('test-progress-bar');
+            if (progressBar) progressBar.style.width = `${progressPercentage}%`;
+
+            // Question Text
+            const questionText = document.getElementById('test-question-text');
+            if (questionText) questionText.innerText = currentQuestion.text;
+
+            const expContainer = document.getElementById('test-explanation-container');
+            if (expContainer) {
+                expContainer.classList.add('hidden');
+            }
+            
+            const feedbackEl = document.getElementById('test-feedback');
+            if (feedbackEl) {
+                feedbackEl.classList.add('hidden');
+            }
+
+            // Load Options
+            const container = document.getElementById('test-options-container');
+            if (container) {
+                container.innerHTML = "";
+
+                currentQuestion.options.forEach((optText, idx) => {
+                    const optButton = document.createElement('button');
+                    optButton.onclick = () => submitTestAnswer(idx);
+                    optButton.className = "w-full bg-slate-800 hover:bg-slate-700/80 text-left p-4 rounded-2xl border border-slate-700/60 transition text-xs md:text-sm font-medium flex items-center gap-3 active:scale-[0.99] cursor-pointer";
+                    optButton.innerHTML = `
+                        <span class="w-6 h-6 rounded-full bg-indigo-500/15 border border-indigo-500/30 text-indigo-400 flex items-center justify-center font-bold text-xs flex-shrink-0">${String.fromCharCode(65 + idx)}</span>
+                        <span class="text-slate-200 leading-relaxed">${optText}</span>
+                    `;
+                    container.appendChild(optButton);
+                });
+            }
+        }
+
+        function submitTestAnswer(selectedIndex) {
+            const currentQuestion = postTestQuestions[testCurrentQuestionIndex];
+            const container = document.getElementById('test-options-container');
+            if (!container) return;
+            const buttons = container.getElementsByTagName('button');
+
+            for (let b of buttons) {
+                b.disabled = true;
+            }
+
+            const feedbackEl = document.getElementById('test-feedback');
+            if (feedbackEl) {
+                feedbackEl.classList.remove('hidden');
+            }
+
+            const expContainer = document.getElementById('test-explanation-container');
+            const expIcon = document.getElementById('test-explanation-icon');
+            const expTitle = document.getElementById('test-explanation-title');
+            const expText = document.getElementById('test-explanation-text');
+            const btnNext = document.getElementById('btn-test-next');
+
+            // Verify
+            if (selectedIndex === currentQuestion.correct) {
+                testCorrectAnswersCount++;
+                buttons[selectedIndex].className = "w-full bg-emerald-500/10 text-left p-4 rounded-2xl border-2 border-emerald-500 transition text-xs md:text-sm font-semibold flex items-center gap-3";
+                
+                // Memainkan melodi sukses untuk jawaban kuis benar
+                playSuccessSound();
+
+                if (feedbackEl) {
+                    feedbackEl.innerText = "🎉 JAWABAN BENAR! +50 XP";
+                    feedbackEl.className = "mt-4 text-center text-xs font-bold py-2 rounded-xl text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 animate-bounce";
+                }
+                
+                if (expIcon && expTitle) {
+                    expIcon.innerText = "🏆";
+                    expTitle.innerText = "Luar Biasa, Jawabanmu Benar!";
+                    expTitle.className = "text-sm font-bold font-fun text-emerald-400";
+                }
+                updateScore(50);
+            } else {
+                buttons[selectedIndex].className = "w-full bg-rose-500/10 text-left p-4 rounded-2xl border-2 border-rose-500 transition text-xs md:text-sm font-semibold flex items-center gap-3";
+                if (buttons[currentQuestion.correct]) {
+                    buttons[currentQuestion.correct].className = "w-full bg-emerald-500/10 text-left p-4 rounded-2xl border border-emerald-500/60 transition text-xs md:text-sm font-semibold flex items-center gap-3";
+                }
+                
+                // Memainkan suara buzzer gagal untuk jawaban kuis salah
+                playFailureSound();
+
+                if (feedbackEl) {
+                    feedbackEl.innerText = "❌ JAWABAN KURANG TEPAT";
+                    feedbackEl.className = "mt-4 text-center text-xs font-bold py-2 rounded-xl text-rose-400 bg-rose-500/10 border border-rose-500/20";
+                }
+                
+                if (expIcon && expTitle) {
+                    expIcon.innerText = "💡";
+                    expTitle.innerText = "Penjelasan Konsep";
+                    expTitle.className = "text-sm font-bold font-fun text-cyan-400";
+                }
+            }
+
+            if (expText) {
+                expText.innerText = currentQuestion.explanation;
+            }
+            if (expContainer) {
+                expContainer.classList.remove('hidden');
+            }
+
+            if (btnNext) {
+                btnNext.onclick = function() {
+                    testCurrentQuestionIndex++;
+                    if (testCurrentQuestionIndex < postTestQuestions.length) {
+                        loadTestQuestion();
+                    } else {
+                        showFinalGameResults();
+                    }
+                };
+            }
+        }
+
+        function showFinalGameResults() {
+            hideAllScreens();
+            screenWin.classList.remove('hidden');
+
+            const testXpAwarded = testCorrectAnswersCount * 50;
+            const winCorrect = document.getElementById('win-test-correct');
+            if (winCorrect) winCorrect.innerText = `${testCorrectAnswersCount} / 10 Soal`;
+            
+            const winXp = document.getElementById('win-test-xp');
+            if (winXp) winXp.innerText = `+${testXpAwarded} XP`;
+
+            const finalScore = score;
+            const totalScore = document.getElementById('win-total-score');
+            if (totalScore) totalScore.innerText = `${finalScore} XP`;
+
+            const evaluationRank = document.getElementById('win-evaluation-rank');
+            const evaluationDesc = document.getElementById('win-evaluation-description');
+            const badgeTitle = document.getElementById('win-badge-title');
+
+            if (testCorrectAnswersCount >= 8) {
+                if (evaluationRank) {
+                    evaluationRank.innerText = "🏆 Super Engineer (Master CT)";
+                    evaluationRank.className = "text-sm font-extrabold text-emerald-400 animate-bounce";
+                }
+                if (badgeTitle) badgeTitle.innerText = "Selamat! Kamu adalah Pahlawan Digital Sejati!";
+                if (evaluationDesc) evaluationDesc.innerText = `Luar biasa, ${playerName}! Kamu berhasil menjawab ${testCorrectAnswersCount} soal pasca-misi dengan benar. Kamu menunjukkan pemahaman tingkat tinggi pada logika Dekomposisi, Loop, dan Berpikir Algoritmis yang sangat berguna di sekolah maupun keseharianmu!`;
+            } else if (testCorrectAnswersCount >= 6) {
+                if (evaluationRank) {
+                    evaluationRank.innerText = "🎖️ Senior Assistant (Hampir Sempurna)";
+                    evaluationRank.className = "text-sm font-extrabold text-cyan-400";
+                }
+                if (badgeTitle) badgeTitle.innerText = "Kerja Bagus! Pulau Digital Telah Pulih!";
+                if (evaluationDesc) evaluationDesc.innerText = `Kerja yang hebat, ${playerName}! Dengan menjawab ${testCorrectAnswersCount} soal benar, kamu sudah memahami pilar penting Computational Thinking dengan cukup baik. Terus asah kemampuan logikamu di platform Scratch, ya!`;
+            } else {
+                if (evaluationRank) {
+                    evaluationRank.innerText = "🔧 Junior Engineer (Butuh Belajar Lagi)";
+                    evaluationRank.className = "text-sm font-extrabold text-amber-500";
+                }
+                if (badgeTitle) badgeTitle.innerText = "Pulau Pulih, Tapi Robo Butuh Penyesuaian!";
+                if (evaluationDesc) evaluationDesc.innerText = `Kamu berhasil memulihkan pulau, ${playerName}, tetapi pemahaman CT kehidupan sehari-harimu masih perlu sedikit latihan lagi (benar ${testCorrectAnswersCount} dari 10). Jangan menyerah! Kamu bisa menekan tombol 'Main Lagi' dan berdiskusi dengan Robo AI di sidebar untuk bimbingan tambahan.`;
+            }
+        }
+
+        function restartGame() {
+            score = 0;
+            scoreSpan.innerText = "0";
+            hideAllScreens();
+            screenIntro.classList.remove('hidden');
         }
 
         // --- GEMINI API INTEGRATION & CO-PILOT CHAT PANEL ---
@@ -976,6 +1680,7 @@
 
         function toggleAiAssistant() {
             const sidebar = document.getElementById('ai-chat-sidebar');
+            if (!sidebar) return;
             if (sidebar.classList.contains('translate-x-full')) {
                 sidebar.classList.remove('translate-x-full');
             } else {
@@ -985,6 +1690,7 @@
 
         async function sendAiMessage() {
             const inputEl = document.getElementById('ai-chat-input');
+            if (!inputEl) return;
             const userText = inputEl.value.trim();
             if (!userText) return;
 
@@ -1007,10 +1713,12 @@ Tugasmu:
 
             try {
                 const aiReply = await callGemini(userText, systemPrompt);
-                document.getElementById(loaderId).remove();
+                const loader = document.getElementById(loaderId);
+                if (loader) loader.remove();
                 renderChatMessage(aiReply, 'ai');
             } catch (err) {
-                document.getElementById(loaderId).remove();
+                const loader = document.getElementById(loaderId);
+                if (loader) loader.remove();
                 renderChatMessage("BZZZT... Maaf koneksi satelitku ke server AI terganggu. Silakan coba kirim kembali pesanmu, partner!", 'ai');
             }
         }
@@ -1022,12 +1730,16 @@ Tugasmu:
         }
 
         function sendQuickAiPrompt(promptText) {
-            document.getElementById('ai-chat-input').value = promptText;
-            sendAiMessage();
+            const inputEl = document.getElementById('ai-chat-input');
+            if (inputEl) {
+                inputEl.value = promptText;
+                sendAiMessage();
+            }
         }
 
         function renderChatMessage(text, sender, isLoader = false) {
             const chatContainer = document.getElementById('ai-chat-messages');
+            if (!chatContainer) return "";
             const messageWrapper = document.createElement('div');
             const msgId = "msg-" + Math.random().toString(36).substr(2, 9);
             messageWrapper.id = msgId;
@@ -1083,16 +1795,26 @@ Tugasmu:
         ];
 
         function initAudioEngine() {
-            if (audioCtx) return;
-            const AudioContext = window.AudioContext || window.webkitAudioContext;
-            audioCtx = new AudioContext();
-            masterGain = audioCtx.createGain();
-            masterGain.gain.setValueAtTime(0.5, audioCtx.currentTime); 
-            masterGain.connect(audioCtx.destination);
+            try {
+                if (audioCtx) return;
+                const AudioContext = window.AudioContext || window.webkitAudioContext;
+                if (!AudioContext) {
+                    console.warn("Web Audio API tidak didukung di browser ini.");
+                    return;
+                }
+                audioCtx = new AudioContext();
+                masterGain = audioCtx.createGain();
+                masterGain.gain.setValueAtTime(0.5, audioCtx.currentTime); 
+                masterGain.connect(audioCtx.destination);
+            } catch (e) {
+                console.error("Gagal menginisialisasi AudioContext (biasanya karena batasan keamanan iframe/Google Sites):", e);
+                audioCtx = null;
+                masterGain = null;
+            }
         }
 
         function playSFX(freq, duration, type = "sine") {
-            if (!audioCtx) return;
+            if (!audioCtx || !masterGain) return;
             try {
                 if (audioCtx.state === 'suspended') {
                     audioCtx.resume();
@@ -1112,13 +1834,12 @@ Tugasmu:
                 osc.start();
                 osc.stop(audioCtx.currentTime + duration);
             } catch (e) {
-                // Audio dimatikan sistem
+                console.warn("Gagal memainkan SFX:", e);
             }
         }
 
         function playSuccessSound() {
-            if (!audioCtx) return;
-            const now = audioCtx.currentTime;
+            if (!audioCtx || !masterGain) return;
             playSFX(523.25, 0.12, "sine"); // C5
             setTimeout(() => playSFX(659.25, 0.12, "sine"), 100); // E5
             setTimeout(() => playSFX(783.99, 0.12, "sine"), 200); // G5
@@ -1126,13 +1847,14 @@ Tugasmu:
         }
 
         function playFailureSound() {
-            if (!audioCtx) return;
+            if (!audioCtx || !masterGain) return;
             playSFX(185.00, 0.2, "sawtooth"); // F#3
             setTimeout(() => playSFX(130.81, 0.4, "sawtooth"), 150); // C3
         }
 
         // Orkestrasi Musik Real-Time Berlapis
         function scheduleMusicStep() {
+            if (!audioCtx || !masterGain) return;
             while (nextStepTime < audioCtx.currentTime + 0.15) {
                 const step = currentStep;
                 const time = nextStepTime;
@@ -1250,26 +1972,33 @@ Tugasmu:
         }
 
         function toggleMusic() {
-            initAudioEngine();
-            const btn = document.getElementById('btn-music');
-            const icon = document.getElementById('music-icon');
+            try {
+                initAudioEngine();
+                if (!audioCtx || !masterGain) {
+                    alertCustom("Audio Tidak Didukung", "Browser kamu membatasi penggunaan audio di dalam halaman ini.");
+                    return;
+                }
+                const btn = document.getElementById('btn-music');
+                const icon = document.getElementById('music-icon');
 
-            if (isMusicPlaying) {
-                clearInterval(melodyInterval);
-                isMusicPlaying = false;
-                icon.className = "fas fa-volume-mute";
-                btn.className = "bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700/60 p-2 rounded-full text-xs transition";
-            } else {
-                isMusicPlaying = true;
-                icon.className = "fas fa-volume-up text-cyan-400 animate-pulse";
-                btn.className = "bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 border border-cyan-500/40 p-2 rounded-full text-xs transition";
-                
-                nextStepTime = audioCtx.currentTime;
-                currentStep = 0;
-                melodyInterval = setInterval(scheduleMusicStep, 45);
+                if (isMusicPlaying) {
+                    clearInterval(melodyInterval);
+                    isMusicPlaying = false;
+                    icon.className = "fas fa-volume-mute";
+                    btn.className = "bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700/60 p-2 rounded-full text-xs transition cursor-pointer";
+                } else {
+                    isMusicPlaying = true;
+                    icon.className = "fas fa-volume-up text-cyan-400 animate-pulse";
+                    btn.className = "bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 border border-cyan-500/40 p-2 rounded-full text-xs transition cursor-pointer";
+                    
+                    nextStepTime = audioCtx.currentTime;
+                    currentStep = 0;
+                    melodyInterval = setInterval(scheduleMusicStep, 45);
+                }
+            } catch (error) {
+                console.error("Gagal menjalankan musik:", error);
             }
         }
     </script>
 </body>
 </html>
- 
